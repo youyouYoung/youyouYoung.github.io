@@ -2,7 +2,7 @@
 layout: post
 title:  "Java的线程同步"
 date:   2016-04-07 10:52:37
-categories: Java
+categories: Java, Thread
 excerpt: 对Java多线程同步的学习和使用
 ---
 
