@@ -32,7 +32,7 @@ excerpt: 在做毕设的网络爬虫时看到的有关依赖注入的代码,顺�
 >		final Injector injector = Guice.createInjector(new CrawlModule());
 >		final Crawel crawel = injector.getInstance(Crawel.class);
 >
->		//
+>		//crawler对象并没有被直接创建,而是在使用getUrls方法时被注入了
 >		final CrawelResult result = crawel.getUrls(getConfigration())
 >	}
 >}
