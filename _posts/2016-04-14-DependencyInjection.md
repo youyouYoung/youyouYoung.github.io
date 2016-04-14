@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title:  "依赖注入的学习"
 date:   2016-04-14 10:29:24
 categories: DependencyInjection
