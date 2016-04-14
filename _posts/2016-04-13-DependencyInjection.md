@@ -35,3 +35,6 @@ excerpt: 在做毕设的网络爬虫时看到了有关依赖注入的代码，顺便学习一下
 >		final CrawlerResult result = crawler.getUrls(getConfiguration());
 >	}
 >}
+
+## 依赖注入的使用
+
