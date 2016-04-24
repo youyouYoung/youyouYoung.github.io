@@ -11,8 +11,8 @@ excerpt: 单例模式如何保证线程安全
 
 ## 单例模式的种类
 *懒汉式*  
-
 因为此类型的对象在调用时才会被创建,所以称为懒汉式.  
+
 >public Singleton  
 >{  
 >	public static Singleton instance;  
@@ -30,9 +30,10 @@ excerpt: 单例模式如何保证线程安全
 >	}  
 >}  
 
-*饿汉式*  
 
+*饿汉式*  
 此类型的对象在类加载时就会被创建,称为饿汉式.  
+
 >public Singleton  
 >{  
 >	public static Singleton instance = new Singleton();  
@@ -77,8 +78,9 @@ excerpt: 单例模式如何保证线程安全
 >		return instance;  
 >	}  
 >}  
-*缺点*  
 
+
+*缺点*  
 同步方法会使该方法只能单个线程访问,效率降低.而可能出现线程安全的情况发生在对象还未创建时.  
 
 *2.使用双重验证方法*  
@@ -103,6 +105,8 @@ excerpt: 单例模式如何保证线程安全
 >		return instance;  
 >	}  
 >}  
+
+
 *缺点*  
 由于位置3处的代码并非时原子操作,即jvm在运行时不会一步完成.他需要的步骤为:  
 1.为instance引用分配空间.  
@@ -113,6 +117,7 @@ excerpt: 单例模式如何保证线程安全
 
 *解决方案*  
 使用volatile关键字修饰instance变量.volatile会标记在jvm执行位置3处代码时不能对指令重新排序.  
+
 >public Singleton  
 >{  
 >	public static volatile Singleton instance;  
