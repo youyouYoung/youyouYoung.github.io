@@ -6,6 +6,7 @@ categories: Java Collection
 expert: 关于Java多线程中集合的学习
 ---
 
+@(asdf)[asdf|qwer|wer]
 * content
 {:toc}
 
