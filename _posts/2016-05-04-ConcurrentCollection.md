@@ -136,6 +136,17 @@ class consumer implements Runnable
 > `replace(K key, V oldValue, V newValue)`    
 > 如果传入的键正好与`oldValues`关联, 将它与`newValues`关联起来. 否则返回`false`.   
 
+## 旧的线程安全集合
+
+`Vertor`与`Hashtable`类分别提供了线程安全的线性表和散列表. 后来这些类被弃用了, 被`ArrayList`和`HashMap`取代但是这两个类并不是线程安全的. 不过我们可以使用`java.util.Collections`类的同步包装器使得任何`Collection`对象变为线程安全的.   
+
+```java
+
+List synchList = Collections.synchronizedCollection(new ArrayList<String>());
+HashMap synchHashMap = Collections.synchronizedCollection(new HashMap<String, String>());
+
+```
+
 ## 参考文献
 
 * **[Java多线程理解：线程安全的集合对象](http://www.jianshu.com/p/eccb5f350c12)**   
