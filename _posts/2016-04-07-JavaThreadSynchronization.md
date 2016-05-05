@@ -33,13 +33,13 @@ excerpt: 对Java多线程的学习和使用
 
 检查该标志的方法为:   
 
-        while (!Thread.currentThread().isInterrupted() && *more work to do*)
+        while (!Thread.currentThread().isInterrupted() && more work to do)
         {
 		do more work.
         }
 
-**注意**   
-
+**注意**     
+ 
 1. 如果对一个处于阻塞状态的线程调用`interrupt()`, 阻塞线程无法检查中断状态, 这时就会产生一个`InterruptedException`异常. 所以当对一个正在处于阻塞状态(使用阻塞方法,如`wait()`, `sleep()`)的线程调用`interrupt()`时, 阻塞方法会抛出`InterruptedException`异常.   
 
 2. 没有任何语言方面的需求要求一个线程在接收到中断标志时应该终止. 中断一个线程只是为了引起该线程的注意, 而且由该线程决断如何处理中断.    
@@ -50,7 +50,7 @@ excerpt: 对Java多线程的学习和使用
         {
 		try
 		{
-			while (!Thread.currentThread().isInterrupted() && *more work to do*)
+			while (!Thread.currentThread().isInterrupted() && more work to do)
 			{
 				do more work.
 			}
