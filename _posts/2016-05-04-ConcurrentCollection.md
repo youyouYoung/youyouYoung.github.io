@@ -2,7 +2,7 @@
 layout: post
 title:  线程安全的集合
 date:   2016-05-04 16:52:56
-categories: Java Collection
+categories: Java Collection Thread
 expert: 关于Java多线程中集合的学习
 ---
 
