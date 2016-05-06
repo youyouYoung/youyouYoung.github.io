@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  具有返回值的异步方法:Callable和Future
+title:  具有返回值的异步方法Callable和Future
 date:   2016-05-05 20:02:14
 categories: Java Thread
 expert: Java实现一个具有返回值的异步方法.
