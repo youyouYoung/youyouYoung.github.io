@@ -112,9 +112,103 @@ public SerialExecutor implements Executor
 
 ```
 
-`java.util.concurrent`包中`Executor`的实现类同时也实现了`ExecutorService`, 这是一个扩展性更广的接口. 其中, `ThreadPoolExecutor`类提供了可扩展的线程池的实现. `Executors`类实现了创建执行器的工厂方法.
+`java.util.concurrent`包中`Executor`的实现类同时也实现了`ExecutorService`, 这是一个扩展性更广的接口. 其中, `ThreadPoolExecutor`类提供了可扩展的线程池的实现. `Executors`类实现了创建执行器的工厂方法.   
 
+## ExecutorService
+---
 
+> public interface ExecutorService   
+> extends Executor  
+
+`ExecutorService`为`Executor`提供了两类方法:   
+
+1. 关闭`Executor`的方法.   
+
+> 如果`ExecutorService`对象使用了关闭方法, 那么它将不在接收新的任务. 该接口提供了两种关闭`ExecutorService`的方法, `shutdown()`方法允许执行器执行完目前已经接收到的任务. `shutdownNow()`方法将阻止处于等待状态的任务的执行, 同时企图停止掉正在执行的任务. 被终止之后的`ExecutorService`对象将没有任务处于执行窗台也没有任务处于等待状态更不会去接收新的任务. 这时应该回收处理器资源.
+
+2. 创建`Future`对象, 跟踪提交来的task的执行情况(通常为异步执行)的方法.   
+
+> `submit`方法实现了上述功能. 该方法继承了`Executor.executor(java.lang.Runnable)`方法而且可以创建一个`Future`对象, 用于取消任务执行或者查看执行状态.   
+> 
+> `invokeAny()`和`invokeAll()`方法是批量执行任务最常用的方法, 该方法可以执行一个任务集合(`Collection<Runnable/Callable>`)并等待其中一个任务或者全部任务执行完毕.   
+> 
+
+**示例**   
+
+该示例实现了一个简单的网络服务, 这里的每个线程相当于一个`Socket`请求. 我们使用`Executors`的工厂方法创建执行器.   
+
+``` java
+
+public NetworkService
+{
+	private final ServerSocket serverSocket;
+	private final ExecutorService pool;
+
+	public NetworkService(int port, int poolSize) throws IOException
+	{
+		serverSocket = new ServerSocket(port);
+		pool = Executor.newFixedThreadPool(poolSize);
+	}
+	
+	//run this NetworkService
+	public void startServer()
+	{
+		try
+		{
+			while (true)
+			{
+				pool.submit(new Handler(serverSocket.accept()));
+			}
+		}
+		finally
+		{
+			//如果出现异常, 需要关闭资源. 这里只对ExecutorService对象做了详细的处理.
+			shutdownResource();
+		}
+	}
+
+	private void shutdownResource()
+	{
+		try
+		{
+			pool.shutdown();
+			serverSocket.close();
+			
+			//Wait a while for existing tasks to terminate.
+			if (!pool.awaitTermintion(60, TimeUnit.SECONDS))
+			{
+				pool.shutdownNow();
+				//Wait a while for tasks to respond to being cancelled			if (!pool.awaitTermintion(60, TimeUnit.SECONDS))
+					System.err.println("Pool did not terminate");
+			}
+
+		}
+		catch (Exception e)
+		{
+			// (Re-)Cancel if current thread also interrupted
+			pool.shutdownNow();
+			// Preserve interrupt status
+			Thread.currentThread().interrupt();
+		}
+	}
+}
+
+class Handler implements Runnable
+{
+	private final Socket socket;
+
+	public Handler(Socket socket)
+	{
+		this.socket = socket;
+	}
+
+	public void run()
+	{
+		//do something about this socket.
+	}
+}
+
+```
 
 ## 参考文献
 
