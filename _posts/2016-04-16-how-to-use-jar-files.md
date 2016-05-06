@@ -2,7 +2,7 @@
 layout: post
 title:  "jar包的使用方法"
 date:   2016-04-16 10:13:45
-categories: Java jar
+categories: Java Jar
 excerpt: 拿到一个jar包,我该怎么用
 ---
 
