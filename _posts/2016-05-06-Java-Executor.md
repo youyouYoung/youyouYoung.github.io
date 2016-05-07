@@ -120,18 +120,34 @@ public SerialExecutor implements Executor
 > public interface ExecutorService   
 > extends Executor  
 
-`ExecutorService`为`Executor`提供了两类方法:   
+`ExecutorService`为`Executor`提供了三类方法:   
 
 1. 关闭`Executor`的方法.   
 
-> 如果`ExecutorService`对象使用了关闭方法, 那么它将不在接收新的任务. 该接口提供了两种关闭`ExecutorService`的方法, `shutdown()`方法允许执行器执行完目前已经接收到的任务. `shutdownNow()`方法将阻止处于等待状态的任务的执行, 同时企图停止掉正在执行的任务. 被终止之后的`ExecutorService`对象将没有任务处于执行窗台也没有任务处于等待状态更不会去接收新的任务. 这时应该回收处理器资源.
-
 2. 创建`Future`对象, 跟踪提交来的task的执行情况(通常为异步执行)的方法.   
+
+3. 批量执行任务.   
+
+> 如果`ExecutorService`对象使用了关闭方法, 那么它将不在接收新的任务. 该接口提供了两种关闭`ExecutorService`的方法, `shutdown()`方法允许执行器执行完目前已经接收到的任务. `shutdownNow()`方法将阻止处于等待状态的任务的执行, 同时企图停止掉正在执行的任务. 被终止之后的`ExecutorService`对象将没有任务处于执行窗台也没有任务处于等待状态更不会去接收新的任务. 这时应该回收处理器资源.   
 
 > `submit`方法实现了上述功能. 该方法继承了`Executor.executor(java.lang.Runnable)`方法而且可以创建一个`Future`对象, 用于取消任务执行或者查看执行状态.   
 > 
+> `java.util.concurrent`   
+> 
+> 1. `Future<?> submit(Runnable task)`   
+> 该方法返回一个`odd-look Future<?>`. 可以使用这个对象的`isDone()`,`cancel()`,`isCancelled()`但`get()`会返回`null`.   
+> 
+> 2. `<T> Future<T> submit(Runnable task, T result)`   
+> 该方法提交一个Runable类的任务, 并在调用`Future.get()`时返回给定的result对象.   
+> 
+> 3. `<T> Future<T> submit(Callable<T> task)`   
+> 该方法提交一个Callable类的任务, 并返回一个`Future`对象查看计算结果.   
+
 > `invokeAny()`和`invokeAll()`方法是批量执行任务最常用的方法, 该方法可以执行一个任务集合(`Collection<Runnable/Callable>`)并等待其中一个任务或者全部任务执行完毕.   
 > 
+> 在处理一个搜索问题时如果可以接受任何解决方案, 那么就可以使用`invokeAny()`方法. 如需要对一个大整数进行因式分解来解码RSA密码.   
+> 
+> `ExecutorCompletionService`类可以将`invokeAll()`操作的结果按照获得结果的顺序保存起来.   
 
 **示例**   
 
@@ -209,6 +225,85 @@ class Handler implements Runnable
 }
 
 ```
+
+## ScheduledExecutorService
+---
+
+> java.util.concurrent
+> 
+> public interface ScheduledExecutorService   
+> extends ExecutorService   
+
+该接口是继承了`ExecutorService`接口. 它可以让提交来的任务在一定的延时之后执行或者让任务定期执行.   
+
+> `<V> ScheduledFuture<V> schedule(Callable<V> callable, long delay, TimeUnit unit)`   
+> `ScheduledFuture<?> schedule(Runnable command, long delay, TimeUnit unit)`   
+> 
+> > `long delay`延时的时间  
+> > `TimeUnit unit`时间单位  
+> 
+> `schedule()`方法会在一定延时后执行接收的任务. 同时返回一个`Future`对象用来检查执行状态.   
+
+> `ScheduledFuture<?> scheduleAtFixedRate(Runnable command, long initialDelay, long period, TimeUnit unit)`   
+> `ScheduledFuture<?> scheduleWithFixedDelay(Runnable command, long initialDelay, long delay, TimeUnit unit)`   
+> 
+> > `long initialDelay`初始执行任务的延时  
+> > `long delay`再次执行任务的时间间隔  
+> 
+> 定期执行接收到的任务直到被取消执行为止.   
+
+**示例**   
+
+该示例完成了一个在一小时时间内每间隔10秒蜂鸣一次的程序.   
+
+``` java
+
+class BeeperControl
+{
+	private final ScheduledExecutorService scheduled = Executors.newScheduledThreadPool(1);
+
+	public void beepForAnHour()
+	{
+		final Runnable beeper = new Runnable(
+			public void run()
+			{
+				System.out.println("beep");
+			}
+		);
+
+		//将每10秒蜂鸣一次的任务交给scheduled.
+		final ScheduledFuture<?> beeperHandler = scheduled.scheduleAtFixedRate(beeper, 10, 10, TimeUnit.SECONDS);
+
+		//在一小时后结束蜂鸣任务.
+		scheduled.schedule(new Runnable{
+			public void run()
+			{
+				beeperHandler.cancel(ture);
+			}
+		}, 60*60, TimeUnit.SECONDS);
+	}
+}
+
+```
+
+## Executors
+---
+
+`Executor`类实现了`Executor`和`ExecutorService`. 该类是一个工厂类用于创建不同种类的执行器, 即线程池.   
+
+| 方法			| 描述		|   
+| :--------------:	| :-----------	|   
+| `newCachedThreadPool`	| 在需要时创建新线程, 空闲线程会被保留69秒 |   
+| `newFixedThreadPool`	| 包含固定数量的线程, 空闲线程会被一直保留 |   
+| `newSingleThreadExecutor` | 只有一个线程的线程池, 它会顺序执行提交的任务 |   
+| `newScheduledThreadPool`  | 为预定执行而构建的固定线程池	 |   
+| `newSingleThreadScheduledExecutor`	| 为预定执行而构建的单线程池 |  
+
+使用线程池的理由:   
+
+1. 程序中需要创建大量的生存周期很短的线程.   
+
+2. 减少并发线程的数量, 创建大量的线程会导致性能降低甚至jvm崩溃.   
 
 ## 参考文献
 
