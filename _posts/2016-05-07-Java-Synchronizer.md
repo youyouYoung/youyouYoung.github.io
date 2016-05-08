@@ -224,6 +224,157 @@ class WorkerRunnable implements Runnable
 
 ```
 
+## Exchanger
+---
+
+> public class Exchanger<v>   
+> extends Object   
+
+`Exchanger`是一个用于在两个线程之间交换数据的同步器. 一个线程将自身的一个对象传给`exchange()`方法同时等待另外的线程也调用`exchange()`, 然后这两个线程就可以互换自身调用`exchange`时上传的对象了. `Exchanger`类似一个双向通道用于两个线程之间传递信息.   
+
+`Exchanger`常用于两个线程工作在统一数据缓冲区时, 一个线程向缓冲区填充数据另一个消费掉这些数据.   
+
+**示例**   
+
+该示例使用`Exchanger`在两个线程之间交换缓冲区, 其中一个向缓冲区填充数据另一个消费数据.   
+
+``` java
+
+class FillAndEmpty
+{
+	Exchanger<DataBuffer> exchanger = new Exchanger<DataBuffer>();
+	DataBuffer initialEmptyBuffer = ...; //初始的空缓冲区,向其中填充数据
+	DataBuffer initialFullBuffer = ...; //初始的满缓冲区,消费其中数据
+
+	class FillingLoop implements Runnable()
+	{
+		public void run()
+		{
+			DataBuffer currentBuffer = initialEmptyBuffer;
+			try
+			{
+				while (currentBuffer != null)
+				{
+					//向缓冲区填充数据
+					addToBuffer(currentBuffer);
+
+					if (currentBuffer.isFull())
+					{
+						currentBuffer = exchanger.exchange(currentBuffer);
+					}
+				}
+			}
+			catch (InterruptedException ex)
+			{....}			
+		}
+	}
+
+	class EmptyingLoop implements Runnable
+	{
+		public void run()
+		{
+			DataBuffer currentBuffer = initialFullBuffer;
+
+			try
+			{
+				while (currentBuffer != null)
+				{
+					//从缓冲区中取数据
+					takeFromBuffer(currentBuffer);
+
+					if (currentBuffer.isEmpty())
+					{
+						currentBuffer = exchanger.exchange(currentBuffer);
+					}
+				}
+			}
+			catch (InterruptedException ex)
+			{....}
+		}
+	}
+
+	void start()
+	{
+		new Thread(new FillingLoop()).start();
+		new Thread(new EmptyingLoop()).start();
+	}
+}
+
+```
+
+## Semaphore - 信号量
+---
+
+> public class Semaphore   
+> extends Object   
+> implements Serializable   
+
+`Semaphore`是一种可计数的信号量, 它包含一定量的许可. 调用其中的`acquire()`方法会申请一个许可, 该方法是一个阻塞方法在当前没有许可可用时会阻塞调用该方法的线程. 每一个`release()`方法会释放一个许可. 许可其实不是一个实际的对象, `Semaphore`通过一个计数器来模拟许可的释放与回收.   
+
+`Semaphore`常用于限制线程通过某一种资源(物理资源或逻辑资源)的数量. 下面的示例使用`Semaphore`来限制通过a pool of items.   
+
+**示例**   
+
+``` java
+
+class Pool
+{
+	private static final int MAX_AVAILABLE = 100;
+	private final Semaphore available = new Semaphore(MAX_AVAILABLE, true);
+
+	public Object getItem()
+	{
+		available.acquire();
+		return getNextAvailableItem();
+	}
+
+	public void putItem(Object x)
+	{
+		//将object置为未使用, 如果该object之前被使用过那么需要释放许可
+		if (markAsUnused(x))
+		{
+			available.release();
+		}
+	}
+
+	protected Object[] items = ...; //whatever kind of items
+	//使用中的item,其used=true. 否则为false.
+	protected boolean[] used = new boolean[MAX_AVAILABLE];
+
+	protected synchronized Object getNextAvailableItem()
+	{
+		for (int i = 0; i < MAX_AVAILABLE; i++)
+		{
+			if (!used[i])
+			{
+				return items[i];
+			}
+		}
+		return null;
+	}
+
+	//被传入的对象之前被使用过返回true,否则返回false
+	protected boolean markAsUnused(Object x)
+	{
+		for (int i = 0; i < MAX_AVAILABLE; i++)
+		{
+			if (items[i] == x)
+			{
+				if (used[i])
+				{
+					used[i] = false;
+					return true;
+				}
+				else
+					return false;
+			}
+		}
+		reture false;
+	}
+}
+
+```
+
 ## 参考文献
 ---
 
@@ -231,4 +382,6 @@ class WorkerRunnable implements Runnable
 
 * **[Java多线程（七）之同步器基础：AQS框架深入分析](http://blog.csdn.net/vernonzheng/article/details/8275624)**   
 
-* **Java 核心技术卷II**
+* **Java 核心技术卷II**   
+
+* **Java SE API**
