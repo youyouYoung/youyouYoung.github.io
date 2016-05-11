@@ -292,7 +292,7 @@ class BeeperControl
 `Executor`类实现了`Executor`和`ExecutorService`. 该类是一个工厂类用于创建不同种类的执行器, 即线程池.   
 
 | 方法			| 描述		|   
-| :-----------:	| :---------	|   
+| :-----:	| :------	|   
 | `newCachedThreadPool`	| 在需要时创建新线程, 空闲线程会被保留69秒 |   
 | `newFixedThreadPool`	| 包含固定数量的线程, 空闲线程会被一直保留 |   
 | `newSingleThreadExecutor` | 只有一个线程的线程池, 它会顺序执行提交的任务 |   
