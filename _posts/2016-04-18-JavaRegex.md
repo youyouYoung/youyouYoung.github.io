@@ -112,7 +112,7 @@ boolean b = Pattern.matches("a*b", "aaaab");
 | X{n,m}	| X,至少n次,最多m次	|  
 
 ### Logical运算符
---
+---
 
 | 构造	| 匹配		|  
 | XY	| XY		|  
