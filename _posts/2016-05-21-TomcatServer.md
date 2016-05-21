@@ -121,7 +121,7 @@ docBase="/usr/share/tomcat7-docs/docs"  ->  docBase="/root/Public/demo"
 动态部署是指可以在服务器启动之后部署web应用程序, 而不用重新启动服务器. 如果想使用动态部署, 需要完全安装Tomcat(主要包括`tomcat7-admin`)同时配置`tomcat-users.xml`文件, 具体配置请看安装部分.
 
 设置完用户之后, 打开`manager webapp`网页(localhost:8080/manager/html). 如下图:
-![manager webapp]({{site.baseurl}}/css/pics/2016-05-21-TomcatServer.png)
+![manager webapp]({{ site.baseurl }}/css/pics/2016-05-21-TomcatServer.png)
 
 `Context Path (required)`对应<Context>中的`path`, 可填:/test
 
