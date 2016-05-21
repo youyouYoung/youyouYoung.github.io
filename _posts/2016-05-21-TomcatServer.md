@@ -123,6 +123,16 @@ docBase="/usr/share/tomcat7-docs/docs"  ->  docBase="/root/Public/demo"
 设置完用户之后, 打开`manager webapp`网页(localhost:8080/manager/html). 如下图:
 ![manager webapp]({{site.baseurl}}/css/pics/2016-05-21-TomcatServer.png)
 
+`Context Path (required)`对应<Context>中的`path`, 可填:/test
+
+`XML Configuration file URL`添加一个xml文件, 类似于在`$CATALINA_HOME/conf/Catalina /localhost`中创建的xml文件, 可空或者创建一个xml传入其位置.
+
+`WAR or Directory URL`对应<Context>中的`docBase`, 可填/root/Public/demo
+
+点击确定即可
+
 ## 参考文献
 
 * **[Ubuntu 中文](https://wiki.ubuntu.org.cn/Tomcat)**
+
+* **[Tomcat部署Web应用方法总结](http://blog.csdn.net/yangxueyong/article/details/6130065)**
