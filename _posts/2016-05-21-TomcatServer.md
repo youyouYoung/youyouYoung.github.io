@@ -131,6 +131,16 @@ docBase="/usr/share/tomcat7-docs/docs"  ->  docBase="/root/Public/demo"
 
 点击确定即可
 
+## 常见问题解决
+
+* **文件存在却无法访问**
+
+常常会出现一个文件明明存在, 但是tomcat一直报404错误. 这可能和你要访问的那个网页权限有关. 修改方法是为该网页文件添加其他用户可读属性.
+
+``` shell
+chmod o+r [文件名称]
+```
+
 ## 参考文献
 
 * **[Ubuntu 中文](https://wiki.ubuntu.org.cn/Tomcat)**
