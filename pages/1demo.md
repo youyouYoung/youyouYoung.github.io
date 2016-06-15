@@ -14,6 +14,9 @@ icon: glyphicon-play
 2016-04-07 | 为我的博客添加评论和站内搜索功能
 2016-04-16 | 将代码显示的样式改一下,我喜欢(这个)[http://webmagic.io/docs/zh/posts/ch4-basic-page-processor/pageprocessor.html]的样式
 2016-04-16 | 写一篇关于XPath, Regex语言规则的博文,还有查一下之前的博文为什么不能显示
+2016-6-15  | Java的注释，如·@Override·怎么实现
+2016-6-15  | ant的功能、作用。
+2016-6-15  | spring框架的特性，如依赖注入等。
 
 ---
 
