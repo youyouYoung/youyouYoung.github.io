@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  JQuery学习笔记(一)
+title:  JQuery学习笔记(一)---概述
 date:   2016-7-24 20:27:53
 categories: JQuery Web
 excerpt: 对JQuery的学习
@@ -20,6 +20,7 @@ excerpt: 对JQuery的学习
 
 * `action()`是对查找到的元素进行的操作
 
+---
 ## 文档就绪函数
 ---
 
@@ -37,6 +38,7 @@ $(document).(function(){
 });
 ```
 
+---
 ## 参考文献
 ---
 
