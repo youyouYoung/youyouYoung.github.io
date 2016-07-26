@@ -25,7 +25,7 @@ JQuery事件函数是在HTML元素的事件被触发的情况下被执行的函�
    <script>
       $(document).ready(function(){
          $("button").click(function(){
-	    $("p:last").toggle();
+	    $("p:last").toggle(); //显示和隐藏标签
 	 });
       });
    </script>
