@@ -80,7 +80,7 @@ CSS选择器用于获取或者设置HTML指定元素的指定CSS值. 例如:
 | #id | `$("#jquery")` | `id=jquery`的元素 |   
 | .class | `$(".intro")` | `class='intro'`的元素 |   
 | element | `$("p")` | 所有的`<p>`元素 |   
-| .class.class | `$(".c1.c2")` | 所有的`class='c1 c2'`的元素 |   
+| .class.class | `$(".c1.c2")` | 所有的`class='c1'`并且`class='c2'`的元素 |   
 | | |   
 | `:first` | `$("p:first")` | 第一个`<p>`元素 |   
 | `:last` | `$("p:last")` | 最后一个`<p>`元素 |   
