@@ -87,6 +87,10 @@ CSS选择器用于获取或者设置HTML指定元素的指定CSS值. 例如:
 | `:even` | `$("li:even")` | 序数为偶数的`<li>`元素 |   
 | `:odd` | `$("li:odd")` | 序数为奇数的`<li>`元素 |   
 | | |   
+| `:contain(text)` | `$("table:contain("father")")` |  所有包含father字符串的`<table>`元素 |   
+| `:empty` | `$(":empty")` | 所有不具有子元素的元素 |   
+| `:hidden` | `$("p:hidden")` | 所有处于隐藏状态的`<p>`元素 |   
+| `:visible` | `$("table:visible")` | 所有处于显示状态的`<table>`元素 |   
 
 
 ---
