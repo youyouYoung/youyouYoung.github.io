@@ -91,7 +91,35 @@ CSS选择器用于获取或者设置HTML指定元素的指定CSS值. 例如:
 | `:empty` | `$(":empty")` | 所有不具有子元素的元素 |   
 | `:hidden` | `$("p:hidden")` | 所有处于隐藏状态的`<p>`元素 |   
 | `:visible` | `$("table:visible")` | 所有处于显示状态的`<table>`元素 |   
-
+| | |   
+| `:eq(index)` | `$("tr td:eq(3)")` | 每个`<tr>`元素中第4个`<td>`元素(index从0开始) |   
+| `:gt(index)` | `$("ul li:gt(3)")` | 每个`<ul>`元素中`index>3`的`<li>`元素 |   
+| `:lt(index)` | `$("ul li:lt(3)")` | 每个`<ul>`元素中`index<3`的`<li>`元素 |   
+| `:not(selector)` | `$("input:not(:empty)")` | 所有的值不为空的`<input>`元素 |   
+| | |   
+| `:header` | `$(":header")` | 每个标题元素`<h1>-<h6>` |   
+| `s1,s2,s3` | `$("#demo, .test, tr")` | 所有`id="demo"`或`class="test"`或`<tr>`元素.(使用','分隔的各选择器之间是或的关系) |   
+| | |   
+| `[attribute]` | `$("[href]")` | 所有带有`href`属性的元素 |   
+| `[attribute=value]` | `$("[href='#']")` | 所有`href`属性等于`#`的元素 |   
+| `[attribute!=value]` | `$("[href!='#']")` | 所有`href`属性不等于`#`的元素 |   
+| `[attribute$=value]` | `$("[href$='.jpg']")` | 所有`href`属性的值以`.jpg`结尾的元素 |   
+| | |   
+| `:input` | `$(":input")` | 所有的`<input>`元素 |   
+| `:text` | `$(":text")` | 所有的`type='text'`的`<input>`元素 |   
+| `:password` | `$(":password")` | 所有的`type="password"`的`<input>`元素 |   
+| `:radio` | `$(":radio")` | 所有的`type="radio"`的`<input>`元素 |   
+| `:checkbox` | `$(":checkbox")` | 所有的`type="checkbox"`的`<input>`元素 |   
+| `:submit` | `$(":submit")` | 所有的`type="submit"`的`<input>`元素 |   
+| `:reset` | `$(":reset")` | 所有的`type="reset"`的`<input>`元素 |   
+| `:button` | `$(":button")` | 所有的`type="button"`的`<input>`元素 |   
+| `:image` | `$(":image")` | 所有的`type="image"`的`<input>`元素 |   
+| `:file` | `$(":file")` | 所有的`type="file"`的`<input>`元素 |   
+| | |   
+| `:enabled` | `$(":enabled")` | 所有激活的`<input>`元素 |   
+| `:disabled` | `$(":disabled")` | 所有被禁用的`<input>`元素 |   
+| `:selected` | `$("option:selected")` | 所有被选中的`<option>`元素.(如果`:selected`前面没有其他的限制, 默认为`<input>`元素) |   
+| `:checked` | `$("option:checked")` | 所有被命中的`<option>`元素.(如果`:checked`前面没有其他的限制, 默认为`<input>`元素) |   
 
 ---
 
