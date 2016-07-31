@@ -101,6 +101,8 @@ excerpt: 为学习JQuery的事件监听函数而了解这部分功能
 
 ---
 
-## 鼠标/键盘属性
+## 参考文献
 
 ---
+
+* **[w3school](http://www.w3school.com.cn/tags/html_ref_eventattributes.asp)**
