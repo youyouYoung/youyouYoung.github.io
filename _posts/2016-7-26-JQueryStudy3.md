@@ -56,7 +56,7 @@ JQuery事件函数是在HTML元素的事件被触发的情况下被执行的函�
 | ready(function) | 文档就绪后触发 |  
 | click(function) | 点击事件发生时触发函数function |   
 | dblclick(function) | 双击事件发生时触发函数function, 如果将`click`和`dblclick`放在一个元素上可能会产生问题 |   
-| focus() | 元素获得焦点时触发 |   
+| focus() | 元素获得焦点时触发, 或将焦点设置到指定元素上 |   
 | mouseover() | 鼠标悬停在元素上时触发 |   
 | bind(event, data, function) | 向元素添加事件处理器. event:必填项, 事件名称. data:选填项, 传递给后面触发函数的参数. function:必填项, 事件处理函数(有示例) |   
 | blur(function) | 当元素失去焦点时触发function函数内容 |   
@@ -65,6 +65,15 @@ JQuery事件函数是在HTML元素的事件被触发的情况下被执行的函�
 | live(event, data, function) | 同`bind()`方法 |   
 | die(event, function) | 移除通过`live()`方法向指定元素添加的事件处理函数(有示例), function参数用来规定要移除的特定函数. |   
 | event.preventDefault() | `event`必填项. 用来阻止一个元素默认的事件处理过程. (有示例) |   
+| event.which | `event`必填项. 获取当前按下的那个键. (有示例) |  
+| keydown(function) | 当按键被按下时, 触发此事件. |  
+| keypress(function) | 类似于`keypress()`函数, 两者之间的区别暂时没有理解. |   
+| keyup(function) | 当按键被放开时, 触发此事件. |   
+| mousedown(function) | 当鼠标被按下时触发此事件. |   
+| mouseup(function) | 当鼠标按键被释放时, 触发此事件. |   
+| mouseover(function) | 当鼠标位于指定元素上方时, 触发此事件. |   
+| mouseout(function) | 当鼠标从指定元素上移开时, 触发此事件. |   
+| one(event, data, function) | 向选定元素添加一个只能执行一次的触发事件`event`, 假设加入event=click, function=function(){}, 那么指定元素在第一次被点击时会触发function函数中的内容. |   
 
 ---
 
@@ -147,6 +156,22 @@ JQuery事件函数是在HTML元素的事件被触发的情况下被执行的函�
 </script>
 <body>
 	<a href="www.github.com">github</a>
+</body>
+```
+
+* `event.which`函数获取当前当前按下的按键的数值.
+
+``` jQuery
+<script>
+	$(document).ready(function(){
+		$("input").keyDown(function(event){
+			$(".demo").val("Key: " + event.which);
+		});
+	});
+</script>
+<body>
+	<input type="text" />
+	<p class="demo"></p>
 </body>
 ```
 
