@@ -74,6 +74,12 @@ JQuery事件函数是在HTML元素的事件被触发的情况下被执行的函�
 | mouseover(function) | 当鼠标位于指定元素上方时, 触发此事件. |   
 | mouseout(function) | 当鼠标从指定元素上移开时, 触发此事件. |   
 | one(event, data, function) | 向选定元素添加一个只能执行一次的触发事件`event`, 假设加入event=click, function=function(){}, 那么指定元素在第一次被点击时会触发function函数中的内容. |   
+| resize(functioon) | 在大小被调整之后触发此监听函数. 可以是浏览器窗口: `$(window)`, 或者是文档: `$(document)`. |   
+| load(function) | 当指定元素加载完成之后, 触发监听函数function. |   
+| scroll(function) | 当指定元素发生滚动事件之后, 触发函数function. |   
+| select(function) | 当指定元素被选中时, 触发此函数. |   
+| submit(function) | 当指定元素发生提交事件时, 触发函数. 监听函数`submit()`只适用于表单元素. |   
+| toggle(function1, function2, ...) | 当指点元素发生连续点击事件时, 该事件函数将轮流执行`function1`, `function2`, ...等, 至少需要两个函数.(有示例) |   
 
 ---
 
@@ -172,6 +178,29 @@ JQuery事件函数是在HTML元素的事件被触发的情况下被执行的函�
 <body>
 	<input type="text" />
 	<p class="demo"></p>
+</body>
+```
+
+* `toggle()`函数, 当发生连续点击事件时轮流调用函数变化`div`背景.
+
+``` jQuery
+<script>
+	$(document).ready(function(){
+		$("button").toggle(
+			function(){
+				$("body").css("background-color","green");
+			},
+			function(){
+				$("body").css("background-color","red");
+			},
+			function(){
+				$("body").css("background-color","yellow");
+			}
+		);
+	});
+</script>
+<body>
+<button>改变背景颜色</button>
 </body>
 ```
 
