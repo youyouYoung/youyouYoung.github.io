@@ -79,7 +79,9 @@ JQuery事件函数是在HTML元素的事件被触发的情况下被执行的函�
 | scroll(function) | 当指定元素发生滚动事件之后, 触发函数function. |   
 | select(function) | 当指定元素被选中时, 触发此函数. |   
 | submit(function) | 当指定元素发生提交事件时, 触发函数. 监听函数`submit()`只适用于表单元素. |   
-| toggle(function1, function2, ...) | 当指点元素发生连续点击事件时, 该事件函数将轮流执行`function1`, `function2`, ...等, 至少需要两个函数.(有示例) |   
+| toggle(speed, callback) | 切换指定元素的显示状态, 如果为正在显示将其设为隐藏, 如隐藏则设为显示. 即在`show()`和`hide()`之前转换. `speed`用于规定hide/show的速度, 默认为0. speed可以选择的值有: 毫秒(如1000), slow, normal, fast. `callback`定义了当toggle()方法完成之后执行的函数. 这两个参数都是非必填项. (有示例) |   
+| trigger(event, param1, param2 ...) | 触发指定元素的`event`事件. 其中event可以是自定义事件, param为可选项, 用于向event函数传递参数. (有示例) |   
+| 
 
 ---
 
@@ -181,26 +183,40 @@ JQuery事件函数是在HTML元素的事件被触发的情况下被执行的函�
 </body>
 ```
 
-* `toggle()`函数, 当发生连续点击事件时轮流调用函数变化`div`背景.
+* `toggle(speed, callback)`函数在点击按钮后缓慢的显示或者隐藏<p>元素.
 
-``` jQuery
+```jQuery
 <script>
 	$(document).ready(function(){
-		$("button").toggle(
-			function(){
-				$("body").css("background-color","green");
-			},
-			function(){
-				$("body").css("background-color","red");
-			},
-			function(){
-				$("body").css("background-color","yellow");
-			}
-		);
+		$("button").click(function(){
+			$("p").toggle("slow");
+			$("#demo").toggle(1000);
+		});
 	});
 </script>
 <body>
-<button>改变背景颜色</button>
+	<p>一行文字</p>
+	<div id="demo">div中的内容.</div>
+	<button>点击</button>
+</body>
+```
+
+* `trigger()`函数当点击按钮时触发文本框的`select`函数.
+
+```jQuery
+<script>
+	$(document).ready(function(){
+		$("input").select(function(){
+			$(this).after("元素被选中!");
+		});
+		$("button").click(function(){
+			$("input").triggle("select");
+		});
+	});
+</script>
+<body>
+	文本框: <input type="text"><br/>
+	<button>点击选中文本框</button>
 </body>
 ```
 
