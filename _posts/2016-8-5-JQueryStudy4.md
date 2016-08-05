@@ -23,6 +23,10 @@ excerpt: 关于jQuery的学习
 
 ### `hide()`&`show()`
 
+`hide()`: 隐藏指定的元素.
+
+`show()`: 显示指定的元素.
+
 ```jquery
 <script>
 	$(".hide").click(function(){
