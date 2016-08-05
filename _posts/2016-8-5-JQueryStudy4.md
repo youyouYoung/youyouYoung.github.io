@@ -17,6 +17,33 @@ excerpt: 关于jQuery的学习
 
 ---
 
+## 实现方法
+
+---
+
+### `hide()`&`show()`
+
+```jquery
+<script>
+	$(".hide").click(function(){
+		$("div").hide();
+	});
+
+	$(".show").click(function(){
+		$("div").show();
+	});
+</script>
+<body>
+	<div>
+		<p>这是一段文字</p>
+	</div>
+	<button class="hide">隐藏上面一段话</button>
+	<button class="show">显示上面一段话</button>
+</body>
+```
+
+---
+
 ## 参考文献
 
 ---
