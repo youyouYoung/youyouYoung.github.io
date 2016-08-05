@@ -76,7 +76,7 @@ JQuery事件函数是在HTML元素的事件被触发的情况下被执行的函�
 | `one()` | `event, [data,] function` | 向选定元素添加一个只能执行一次的触发事件`event`, 假设加入`event=click, function=function(){}`, 那么指定元素在第一次被点击时会触发`function`函数中的内容. |   
 | `resize()` | `function` | 在大小被调整之后触发此监听函数. 可以是浏览器窗口: `$(window)`, 或者是文档: `$(document)`. |   
 | `load()` | `function` | 当指定元素加载完成之后, 触发监听函数`function`. |   
-| `scroll()` | 'function' | 当指定元素发生滚动事件之后, 触发函数`function`. |   
+| `scroll()` | `function` | 当指定元素发生滚动事件之后, 触发函数`function`. |   
 | `select()`  | `function` | 当指定元素被选中时, 触发此函数. |   
 | `submit()` | `function` | 当指定元素发生提交事件时, 触发函数. 监听函数`submit()`只适用于表单元素. |   
 | `toggle()` | `[speed, callback]` | 切换指定元素的显示状态, 如果为正在显示将其设为隐藏, 如隐藏则设为显示. 即在`show()`和`hide()`之前转换. `speed`用于规定hide/show的速度, 默认为0. `speed`可以选择的值有: 毫秒(如1000), slow, normal, fast. `callback`定义了当toggle()方法完成之后执行的函数. 这两个参数都是非必填项. (有示例) |   
