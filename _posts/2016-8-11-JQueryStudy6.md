@@ -23,15 +23,41 @@ excerpt: 关于jquery滑动效果的学习
 
 JQuery中有三种方法实现滑动效果, 分别是:  
 
-* `slideDown()`用于向下滑动选定元素. (是滑入效果)
+* `slideDown()`用于向下滑动选定元素. (是显示效果)
 
-* `slideUp()`用于向上滑动选定元素. (是滑出效果)
+* `slideUp()`用于向上滑动选定元素. (是隐藏效果)
 
 * `slideToggle()`用于在向上滑动和向下滑动之间转换.
 
-### slideDown
+### `slideDown()`
 
+`slideDown()`用于向下滑动, 具有显示效果.
 
+**用法**: $(selector).slideDown(speed, callback);
+
+| 可选参数 | 说明 |   
+| [speed] | 规定速度 |   
+| [callback] | 滑动效果执行完成之后执行的函数. |   
+
+### `slideUp()`
+
+`slideUp()`用于向上滑动, 具有隐藏效果.
+
+**用法**: $(selector).slideUp(speed, callback);
+
+| 可选参数 | 说明 |   
+| [speed] | 规定速度 |   
+| [callback] | 滑动效果执行完成之后执行的函数. |   
+
+### `slideToggle()`
+
+`slideToggle()`用于在`slideDown()`和`slideUp()`之间转换.
+
+**用法**: $(selector).slideToggle(speed, callback);
+
+| 可选参数 | 说明 |   
+| [speed] | 规定速度 |   
+| [callback] | 滑动效果执行完成之后执行的函数. |   
 
 ---
 
