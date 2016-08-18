@@ -126,4 +126,4 @@ excerpt: 关于jQuery设置内容和属性的学习
 
 ---
 
-* **[w3school]()**
+* **[w3school](http://www.w3school.com.cn/jquery/jquery_dom_set.asp)**
