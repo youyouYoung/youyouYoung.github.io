@@ -17,7 +17,7 @@ excerpt: 关于jQuery遍历DOM对象中元素的学习
 
 整个HTML文本可以视为一个由HTML标签组成的标签树. 如下图:
 
-[!DOM树结构图]({{ site.baseurl }}/css/pics/dom_tree.gif)
+![DOM树结构图]({{ site.baseurl }}/css/pics/dom_tree.gif)
 
 ---
 
