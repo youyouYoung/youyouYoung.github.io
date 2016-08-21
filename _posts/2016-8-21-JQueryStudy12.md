@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  JQuery学习笔记(十二)--获取并设置CSS
+title:  JQuery学习笔记(十二)---获取并设置CSS
 date:   2016-8-21 16:00:47
 categories: jQuery Web
 excerpt: 关于jQuery对css操作的学习
