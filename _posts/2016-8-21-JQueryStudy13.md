@@ -143,6 +143,18 @@ excerpt: 关于jQuery遍历DOM对象中元素的学习
 		$("h2").prevUntil("h6");
 	});
 </script>
+<body>
+	<div>div (父)
+		<p>p</p>
+		<span>span</span>
+		<h2>h2</h2>
+		<h3>h3</h3>
+		<h4>h4</h4>
+		<h5>h5</h5>
+		<h6>h6</h6>
+		<p>p</p>
+	</div>
+</body>
 ```
 
 ---
