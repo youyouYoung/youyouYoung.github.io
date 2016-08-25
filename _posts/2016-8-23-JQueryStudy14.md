@@ -23,6 +23,10 @@ excerpt: 关于JQuery提供的遍历函数的学习
 
 | 函数 | 参数 | 描述 |   
 | `andSelf()` | 无 | 将堆栈中之前的元素集添加到当前的集合中. |   
+| `children()` | [selector] | 查找当前选定元素的所有直接子元素, 如果有参数则选择所有符合参数选择器要求的子元素. |   
+| `closest()` | selector | 从当前选定元素开始向上查找(找祖先元素), 获取第一个符合选择器要求的元素. |   
+| ``
+
 
 ### `andSelf()`示例
 
@@ -31,7 +35,12 @@ excerpt: 关于JQuery提供的遍历函数的学习
 ```jquery
 <script>
 	$(document).ready(function(){
-		
+		//方法一
+		$(".third-item").css("background-color", "red");
+		$(".third-item").nextAll().css("background-color", "red");
+
+		//方法二
+		$(".third-item").nextAll().andSelf().css("background-color", "red");
 	});
 </script>
 <html>
@@ -43,6 +52,30 @@ excerpt: 关于JQuery提供的遍历函数的学习
 		<li>list item 5</li>
 	</ul>
 </html>
+```
+
+由上面的例子可以看出, `andSelf()`会将当前选中元素并入操作结果的堆栈中.
+
+### `closest()`示例
+
+该示例的目的是为了通过点击任意一个元素并改变距离该元素最近的`<li>`的背景.
+
+```jQuery
+<style>
+	li { margin: 3px; padding: 3px; background: #EEEEEE; }
+	li.hilight { background: yellow; }
+</style>
+<script>
+	$(document).bind("click", function(e){
+		$(e.target).closest("li").toggleClass("hilight");
+	});
+</script>
+<body>
+	<ul>
+		<li><b>Click me!</b></li>
+		<li>You can also <b>Click me!</b></li>
+	</ul>
+</body>
 ```
 
 ---
