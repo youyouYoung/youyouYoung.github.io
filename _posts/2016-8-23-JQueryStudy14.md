@@ -85,6 +85,22 @@ excerpt: 关于JQuery提供的遍历函数的学习
 
 `children()` 方法类似于 `contents()` , 但前者指获取选定元素中的子元素, 不提取其他内容. **`contents()` 也可以获取 `<iframe>` 的内容, 前提是 iframe 和主页面在同一个域中.**
 
+下面的示例中, 使用 `contents()` 方法对文本段落进行加粗.
+
+```jQuery
+<script>
+	$(document).ready(function(){
+		$("p").contents().filter(function(){
+			//nodeType 属性存有指示节点类型的数字代码, 文本节点=3, 标签 = 1.
+			this.nodeType != 1;
+		}).wrap("<b/>");
+	});
+</script>
+<body>
+	<p>Hello <a href="http://myapple.com.cn/">Apple</a>, how are you doing?</p>
+</body>
+```
+
 ### `end()`示例
 
 大多数 jQuery 的遍历方法会操作一个 jQuery 对象实例，并生成一个匹配不同 DOM 元素集的新对象。当发生这种情况时，应该会把新的元素集推入维持在对象中的堆栈内。每次成功的筛选方法调用都会把新元素推入堆栈中。如果我们需要老的元素集，可以使用 `end()` 从堆栈中弹出新集合。
