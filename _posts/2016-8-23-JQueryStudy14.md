@@ -28,6 +28,11 @@ excerpt: 关于JQuery提供的遍历函数的学习
 | `contents()` | 无 | 获得选定元素包含的所有元素, 包括子元素/文本/注释节点等. |   
 | `each()` | function([index], [element]) | 遍历当前堆栈中选中的所有元素. index 表示当前执行元素的序号, element 当前执行元素. |   
 | `end()`| 无 | 结束当前链条中的筛选结果, 将匹配元素还原为之前的状态. |   
+| `eq()` | index | 从当前结果堆栈中找到位置 index 处的元素. |   
+| `filter()` | selector/function() | 将当前匹配元素集合缩减为符合 selector 选择器条件的子集合. |   
+| `find()` | selector | 获取当前元素集合中每一个元素的后代中符合选择器要求的元素集合. |    
+| `first()` | 无 | 获取当前元素集合中的第一个元素. |   
+| `has()` | selector | 用于对当前匹配集合进行筛选, 找到集合中符合 selector 的元素以及其子元素作为子集合. |   
 
 
 ### `andSelf()`
