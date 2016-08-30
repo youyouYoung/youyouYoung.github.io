@@ -33,7 +33,9 @@ excerpt: 关于JQuery提供的遍历函数的学习
 | `find()` | selector | 获取当前元素集合中每一个元素的后代中符合选择器要求的元素集合. |    
 | `first()` | 无 | 获取当前元素集合中的第一个元素. |   
 | `has()` | selector | 用于对当前匹配集合进行筛选, 找到集合中符合 selector 的元素以及其子元素作为子集合. |   
-
+| `is()` | selector | 检查当前元素集合中是否包含符合选择器要求的元素, 若果存在返回 `true`. 该方法常在 callback 内部比较有用. |   
+| `last()` | 无 | 将匹配元素集合缩减为集合中的最后一个元素. |   
+| `map()` |
 
 ### `andSelf()`
 
@@ -131,6 +133,29 @@ excerpt: 关于JQuery提供的遍历函数的学习
 		<li>list item 2</li>
 		<li class="bar">list item 3</li>
 	</ul>
+</body>
+```
+
+### `is()`
+
+与其他筛选方法不同, `.is()` 不创建新的 `jQuery` 对象. 相反它允许我们在不修改 `jQuery` 对象内容的情况下对其进行检测. 这在 `callback` 内部通常比较有用比如事件处理程序.
+
+```jQuery
+<script>
+	$("ul").click(function(event){
+		var $target = $(event.target);
+		if ($target.is("li"))
+		{
+			$target.css("background-color", "red");
+		}
+	});
+</script>
+<body>
+<ul>
+	<li>list <strong>item 1</strong></li>
+	<li><span>list item 2</span></li>
+	<li>list item 3</li>
+</ul>
 </body>
 ```
 
