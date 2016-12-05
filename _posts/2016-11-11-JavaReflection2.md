@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Java反射机制(二) --- Class类方法的使用
+title:  Java反射机制(二) --- Class类中方法的使用
 date:   2016-11-11 09:54:23
 categories: Java
 excerpt: Java反射机制学习第二弹 - 关于 Class 类中方法的使用
