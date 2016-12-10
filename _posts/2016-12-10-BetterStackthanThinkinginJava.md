@@ -81,7 +81,7 @@ class CustomStack<E>
 	{
 		public E element;
 		public Node<E> next;
-		private static final Node sentinel;
+		private static final Node<?> sentinel;
 		
 		static
 		{
@@ -89,19 +89,19 @@ class CustomStack<E>
 			 * 这里如果使用单例设计模式, 而不是静态代码块的话就不会出现没有泛型约束的 Warning. 
 			 * 不过在了解了 Java 泛型擦除之后, 对这些 warning 已经不再强迫了.
 			 * */
-			sentinel = new Node<>();
+			sentinel = new Node<>(null, null);
 		}
 		
-		private Node() {};
 		Node(E element, Node<E> node)
 		{
 			this.element = element;
 			this.next = node;
 		}
 		
-		static Node getEndSentinel()
+		@SuppressWarnings("unchecked")
+		static <U> Node<U> getEndSentinel()
 		{
-			return sentinel;
+			return (Node<U>)sentinel;
 		}
 		
 		boolean isEnd()
