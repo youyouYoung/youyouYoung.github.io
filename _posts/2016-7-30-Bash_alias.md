@@ -2,7 +2,7 @@
 layout: post
 title:  Bash Shell命令学习---alias
 date:   2016-7-30 13:06:13
-categories: Linux Bash
+categories: Shell
 excerpt: 复习之前学习的Linux命令
 ---
 

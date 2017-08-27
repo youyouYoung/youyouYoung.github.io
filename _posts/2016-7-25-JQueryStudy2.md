@@ -2,7 +2,7 @@
 layout: post
 title:  JQuery学习笔记(二)---选择器
 date:  2016-7-25 17:21:26
-categories: JQuery Web
+categories: JQuery
 excerpt: 关于的JQuery的学习
 ---
 

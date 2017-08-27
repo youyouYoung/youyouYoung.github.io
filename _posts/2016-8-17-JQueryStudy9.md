@@ -2,7 +2,7 @@
 layout: post
 title:  JQuery学习笔记(九)---设置内容和属性
 date:   2016-8-17 12:34:06
-categories: JQuery Web
+categories: JQuery
 excerpt: 关于jQuery设置内容和属性的学习
 ---
 

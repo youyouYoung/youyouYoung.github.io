@@ -2,7 +2,7 @@
 layout: post
 title:  HTML DOM Event 对象
 date:   2016-7-26 13:11:47
-categories: Web HTML
+categories: Html
 excerpt: 为学习JQuery的事件监听函数而了解这部分功能
 ---
 

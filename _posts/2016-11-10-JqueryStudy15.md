@@ -2,7 +2,7 @@
 layout: post
 title:  Jquery定期执行任务
 date:   2016-11-10 18:01:32
-categories: Jquery Web
+categories: JQuery
 excerpt: 关于Jquery定期执行任务
 ---
 

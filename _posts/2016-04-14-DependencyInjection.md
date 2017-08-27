@@ -2,7 +2,7 @@
 layout: post
 title:  "依赖注入的学习"
 date:   2016-04-14 10:29:24
-categories: DependencyInjection
+categories: Java
 excerpt: 在做毕设的网络爬虫时看到的有关依赖注入的代码,顺便学习一下
 ---
 

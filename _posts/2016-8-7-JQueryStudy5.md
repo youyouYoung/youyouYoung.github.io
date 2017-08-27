@@ -2,7 +2,7 @@
 layout: post
 title:  JQuery学习笔记(五)---淡入淡出
 date:   2016-8-7 11:53:05
-categories: JQuery Web
+categories: JQuery
 excerpt: 关于jquery的学习
 ---
 

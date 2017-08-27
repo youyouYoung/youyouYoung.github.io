@@ -2,7 +2,7 @@
 layout: post
 title:  Tomcat服务器配置
 date:   2016-05-21 14:23:48
-categories: Server Tomcat
+categories: Tomcat
 expert: Tomcat服务器的配置
 ---
 

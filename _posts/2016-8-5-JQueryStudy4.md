@@ -2,7 +2,7 @@
 layout: post
 title:  JQuery学习笔记(四)--隐藏和显示
 date:   2016-8-5 13:18:02
-categories: JQuery Web
+categories: JQuery
 excerpt: 关于jQuery的学习
 ---
 

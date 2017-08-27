@@ -2,7 +2,7 @@
 layout: post
 title:  JQuery学习笔记(八)---获取内容和属性
 date:   2016-8-15 12:46:13
-categories: JQuery Web
+categories: JQuery
 excerpt: 关于jquery获取DOM对象的内容和属性方法的学习
 ---
 

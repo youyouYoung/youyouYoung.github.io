@@ -2,7 +2,7 @@
 layout: post
 title:  Java同步器
 date:   2016-05-07 20:31:45
-categories: Java Thread
+categories: Java
 expert: Java多线程中同步器的学习
 ---
 

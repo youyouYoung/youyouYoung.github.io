@@ -2,7 +2,7 @@
 layout: post
 title:  Java单例模式与线程安全
 date:	2016-04-23 15:12:26
-categories: Java Pattern Thread
+categories: Java
 excerpt: 单例模式如何保证线程安全
 ---
 

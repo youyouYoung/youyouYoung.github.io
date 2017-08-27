@@ -2,7 +2,7 @@
 layout: post
 title:  JQuery学习笔记(一)---概述
 date:   2016-7-24 20:27:53
-categories: JQuery Web
+categories: JQuery
 excerpt: 对JQuery的学习
 ---
 

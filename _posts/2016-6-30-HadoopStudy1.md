@@ -2,7 +2,7 @@
 layout: post
 title:  "hadoop的安装以及伪分布配置"
 date:   2016-6-30 12:06:44
-categories: Server Hadoop
+categories: Hadoop
 excerpt: hadoop的学习和使用
 ---
 

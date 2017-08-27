@@ -2,7 +2,7 @@
 layout: post
 title:  JQuery复制网页内容到系统剪切板
 date:   2016-9-2 13:21:29
-categories: JQuery Web
+categories: JQuery
 excerpt: 部门老大屁事很多. 有一天硬是要一个复制网页文本的功能, 硬生生的逼着我获得了这项技能, 感谢这位老大.
 ---
 

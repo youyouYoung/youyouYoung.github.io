@@ -2,7 +2,7 @@
 layout: post
 title:  "Java多线程"
 date:   2016-04-07 10:52:37
-categories: Java Thread
+categories: Java
 excerpt: 对Java多线程的学习和使用
 ---
 

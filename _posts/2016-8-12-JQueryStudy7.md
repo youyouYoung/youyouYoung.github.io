@@ -2,7 +2,7 @@
 layout: post
 title:  JQuery学习笔记(七)---Callback
 date:   2016-8-12 17:42:48
-categories: JQuery Web
+categories: JQuery
 excerpt: 关于JQuery的学习
 ---
 

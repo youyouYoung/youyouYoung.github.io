@@ -2,7 +2,7 @@
 layout: post
 title:  JQuery学习笔记(十四)---遍历函数
 date:   2016-8-23 13:04:22
-categories: JQuery Web
+categories: JQuery
 excerpt: 关于JQuery提供的遍历函数的学习
 ---
 

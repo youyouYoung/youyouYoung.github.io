@@ -2,7 +2,7 @@
 layout: post
 title:  JQuery学习笔记(十一)---删除元素
 date:   2016-8-21 12:07:21
-categories: JQuery Web
+categories: JQuery
 excerpt: 关于jQuery删除元素的学习
 ---
 

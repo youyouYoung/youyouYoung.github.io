@@ -2,7 +2,7 @@
 layout: post
 title:  JQuery学习笔记(六)---滑动效果
 date:   2016-8-11 12:44:23
-categories: JQuery Web
+categories: JQuery
 excerpt: 关于jquery滑动效果的学习
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title:  java,javac,jar的用法
 date:   2016-04-16 10:13:45
-categories: Java Jar
+categories: Java
 excerpt: 拿到一个jar包,我该怎么用. 怎编译需要第三方jar的项目
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title:  关于Java多线程的问题的解决
 date:   2016-05-21 10:15:15
-categories: Java Thread
+categories: Java
 expert: "Java多线程虽然常被用到,但是有一些问题还是需要考虑"
 ---
 

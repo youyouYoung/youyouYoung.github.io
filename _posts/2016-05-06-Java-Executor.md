@@ -2,7 +2,7 @@
 layout: post
 title:  Java线程池以及执行器的使用
 date:   2016-05-06 09:28:59
-categories: Java Thread
+categories: Java
 expert: 关于Java线程池,执行器使用方法的学习.
 ---
 

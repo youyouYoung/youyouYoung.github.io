@@ -2,7 +2,7 @@
 layout: post
 title:  JQuery操作iframe的内容
 date:   2016-9-4 18:05:27
-categories: Web JQuery
+categories: JQuery
 excerpt: 网页中经常会使用iframe来展现另一个网页文件的内容, 但是这种情况下我们不能直接通过jQuery的选择器获取iframe中的元素.
 ---
 

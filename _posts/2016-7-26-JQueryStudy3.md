@@ -2,7 +2,7 @@
 layout: post
 title:  JQuery学习笔记(三)---事件函数
 date:   2016-7-26 11:00:59
-categories: JQuery Web
+categories: JQuery
 excerpt: 关于JQuery事件函数的学习
 ---
 

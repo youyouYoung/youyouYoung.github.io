@@ -2,7 +2,7 @@
 layout: post
 title:  jQuery学习笔记(十三)---遍历
 date:   2016-8-21 17:17:53
-categories: JQuery Web
+categories: JQuery
 excerpt: 关于jQuery遍历DOM对象中元素的学习
 ---
 
