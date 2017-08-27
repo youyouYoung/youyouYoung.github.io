@@ -24,6 +24,174 @@ expert: Ñ§Ï°ambari²¿ÊğÓ¦ÓÃSparkÊ±, ĞèÒªÄ£ÄâÒ»¸öCentos¼¯Èº. Ã¿´Î´´½¨¶¼Íü¼Ç·½·¨, Õ
 
 ---
 
+## ´´½¨ĞéÄâ»ú
+
+---
+
+1. ĞÂ½¨ĞéÄâ»ú, Ö¸¶¨ÎªCentosÏµÍ³. ÕâÀïType:Linux Version:Red Hat(64-bit)
+
+![centos_step0]({{ site.baseurl }}/file/create_centos_step0.png)
+
+2. ÉèÖÃÄÚ´æ´óĞ¡. ÕâÀïÁ¿Á¦¶øĞĞ.
+
+![centos_step1]({{ site.baseurl }}/file/create_centos_step1.png)
+
+3. ´´½¨´ÅÅÌ¿Õ¼ä, Ñ¡ÔñÏÖÔÚ´´½¨.
+
+![centos_step2]({{ site.baseurl }}/file/create_centos_step2.png)
+
+4. Ñ¡ÔñÎÄ¼şÀàĞÍ, Ä¬ÈÏ¼´¿É.
+
+![centos_step3]({{ site.baseurl }}/file/create_centos_step3.png)
+
+5. ĞéÄâ»ú´ÅÅÌÔÚÕæÊµ´ÅÅÌÉÏµÄÕ¼ÓÃ·½Ê½, ÎÒÑ¡Ôñ¹Ì¶¨´óĞ¡ÊÇÎªÁËÔËĞĞÁ÷³©ĞÔ¿¼ÂÇ.
+
+![centos_step4]({{ site.baseurl }}/file/create_centos_step4.png)
+
+6. ·ÖÅä´ÅÅÌ´óĞ¡, Á¿Á¦¶øĞĞ¼´¿É.
+
+![centos_step5]({{ site.baseurl }}/file/create_centos_step5.png)
+
+Íê³ÉÒÔÉÏÁù²½¼´¿É´´½¨Ò»¸öĞÂµÄĞéÄâ»ú.
+
+---
+
+## Ê×´Î¿ª»úÇ°ÅäÖÃ
+
+---
+
+ÉÏÃæµÄ²Ù×÷ÎÒÃÇÒÑ¾­¸øĞéÄâ»ú·ÖÅäÁËÄÚ´æºÍÓ²ÅÌ, ½ÓÏÂÀ´¿ªÊ¼°²×°ÏµÍ³. µã»÷¸Õ´´½¨µÄĞéÄâ»úÓÒ¼ü½øÈëÉèÖÃ½çÃæ.
+
+1. **System**½çÃæ, Æô¶¯Ë³Ğò´¦È¡ÏûÈíÅÌÑ¡Ïî, ²¢½«¹âÇıºÍÓ²ÅÌÉÏÒÆ.
+
+![setting_centos_step0]({{ site.baseurl }}/file/setting_centos_step0.png)
+
+2. **Storage**½çÃæ, ¹âÇıÌí¼ÓÎÒÃÇÏÂÔØºÃµÄ`centos.iso`¾µÏñÎÄ¼ş. 
+
+![setting_centos_step1]({{ site.baseurl }}/file/setting_centos_step1.png)
+
+3. **Network**½çÃæ, **Ö»Æô¶¯µÚÒ»¸öÍøÂçÊÊÅäÆ÷, Í¨¹ıAttached toÑ¡ÔñNATÄ£Ê½, ÆäÓàÄ¬ÈÏ¼´¿É**. Ç§Íò²»ÒªÊ¹ÓÃÆäËû·½Ê½. 
+
+![setting_centos_step2]({{ site.baseurl }}/file/setting_centos_step2.png)
+
+µã»÷±£´æ°´Å¥, ÒÔÉÏÎÒÃÇÉèÖÃºÃÁË³õ´ÎÆô¶¯Ç°µÄ±ØÒªÅäÖÃ. ×¼±¸¿ª»ú°²×°ÏµÍ³.
+
+---
+
+## °²×°ÏµÍ³
+
+---
+
+ÏÂÃæ¿ªÊ¼°²×° `Centos 7`
+
+1. Ñ¡ÔñÖ±½Ó°²×°, ÇÃ»÷»Ø³µºóµÈ´ıÏµÍ³³ÌĞò×Ô¼ì.
+
+![install_centos_step0]({{ site.baseurl }}/file/install_centos_step0.png)
+
+2. Ñ¡ÔñÓïÑÔ, ÕâÀïÊ¹ÓÃÓ¢Óï. Ö´ĞĞÏÂÒ»²½. 
+
+![install_centos_step1]({{ site.baseurl }}/file/install_centos_step1.png)
+
+3. Ê×ÏÈÑ¡ÔñÊ±Çø(DATE & TIME), µØÍ¼ÉÏµã»÷ÖĞ¹ú¼´¿É.
+
+![install_centos_step2]({{ site.baseurl }}/file/install_centos_step2.png)
+
+4. ÅäÖÃÍøÂç(NETWORK & HOST NAME), **ÕâÀïÒ»¶¨Òª½« Ethernet Ñ¡ÔñÎª¿ª»úÆô¶¯.**(10.0.2.2 10.0.2.3)
+
+![install_centos_step3]({{ site.baseurl }}/file/install_centos_step3.png)
+![install_centos_step4]({{ site.baseurl }}/file/install_centos_step4.png)
+
+5. Ñ¡Ôñ°²×°Î»ÖÃ(INSTALLATION DESTINATION). ÕâÀï²»ÓÃ×öÆäËûÑ¡Ôñ, Ö»ÊÇÎªÁËÈ·ÈÏÒ»ÏÂ¶øÒÑ. 
+
+![install_centos_step5]({{ site.baseurl }}/file/install_centos_step5.png)
+
+6. µã»÷¿ªÊ¼°²×°, ÔÚÕâ¸ö½çÃæÖĞÎªrootÓÃ»§´´½¨ÃÜÂë. µã»÷È·ÈÏ¼´¿É.
+
+![install_centos_step6]({{ site.baseurl }}/file/install_centos_step6.png)
+
+ÒÔÉÏÎªÕû¸ö°²×°¹ı³Ì, µÈ´ı°²×°½áÊøºó, ¿ÉÒÔÊ¹ÓÃ`root`ÕË»§ºÍ×îºóÒ»²½ÉèÖÃµÄÃÜÂëµÇÂ¼ÏµÍ³ÁË.
+
+---
+
+## ÅäÖÃÍøÂç
+
+---
+
+Í¨¹ıÉÏÃæµÄ°²×°¹ı³Ì, ¿ÉÒÔÍê³ÉcentosµÄ°²×°, µ«ÊÇÈÔÈ»´æÔÚÎÊÌâ. Ö÷»úÎŞ·¨·ÃÎÊĞéÄâ»úÒòÎªÔÚÅäÖÃĞéÄâ»úÊ±ÎÒÃÇÊ¹ÓÃÁËNATÍøÂçÄ£Ê½. 
+
+ÕâÀïĞèÒª½«NATÄ£Ê½×ªÎªÇÅ½ÓÄ£Ê½, ²¢Î»Centos 7ÅäÖÃ¾²Ì¬IP.
+
+1. °²×°`net-tools`
+
+```shell
+yum -y install net-tools
+```
+
+![network_centos_step0]({{ site.baseurl }}/file/network_centos_step0.png)
+
+2. `ifconfig`²é¿´Íø¿¨ĞÅÏ¢
+
+![network_centos_step1]({{ site.baseurl }}/file/network_centos_step1.png)
+
+ÉÏÍ¼ÖĞ¿´³öÏµÍ³¾ßÓĞÒ»¸ö`enp0s3`µÄÍø¿¨.
+
+3. ±à¼­Íø¿¨ĞÅÏ¢
+
+``` shell
+vi /etc/sysconfig/network-scripts/ifcfg-enp0s3
+```
+
+½«`BOOTPROTO`¸ÄÎª`static`. ²¢Ìí¼ÓIPĞÅÏ¢, È«²¿ÎÄ¼şÄÚÈİÎª:
+
+```
+TYPE="Ethernet"
+BOOTPROTO="static"
+DEFROUTE="yes"
+PEERDNS="yes"
+PEERROUTES="yes"
+IPV4_FAILURE_FATAL="no"
+IPV6INIT="yes"
+IPV6_AUTOCONF="yes"
+IPV6_DEFROUTE="yes"
+IPV6_PEERDNS="yes"
+IPV6_PEERROUTES="yes"
+IPV6_FAILURE_FATAL="no"
+IPV6_ADDR_GEN_MODE="stable-privacy"
+NAME="enp0s3"
+UUID="bf754dd0-bcb1-4a94-ba65-fbd8bcd577d7"
+DEVICE="enp0s3"
+ONBOOT="yes"
+
+IPADDR=192.168.99.203
+GATEWAY=192.168.99.1
+NM_CONTROLLED=no
+NETMASK=255.255.255.0
+```
+
+4. ¹Ø±ÕĞéÄâ»ú, ½«ÍøÂçÉèÖÃÎªÇÅ½ÓÄ£Ê½.
+
+![network_centos_step3]({{ site.baseurl }}/file/network_centos_step3.png)
+
+5. Æô¶¯ĞéÄâ»ú, Ê¹ÓÃ`ping`¼´¿É¼ì²éµ½Ö÷»úºÍĞéÄâ»úÖ®¼äµÄ·ÃÎÊÁË. µ«Ä¿Ç°¿ÉÄÜ»¹Ã»°ì·¨½âÎöÓòÃû. 
+
+ËùÒÔÎÒÃÇÍ¨¹ı`ping www.baidu.com`, ÈÔÈ»ÎŞ·¨·ÃÎÊ°Ù¶È. ËùÒÔ×îºóÒ»²¿ÎÒÃÇĞèÒªÅäÖÃDNS·şÎñÆ÷µØÖ·.
+
+* ĞŞ¸ÄÎÄ¼ş`/etc/NetworkManager/NetworkManager.conf`, ÔÚ`main`²¿·ÖÌí¼Ó`dns=none`
+
+![network_centos_step4]({{ site.baseurl }}/file/network_centos_step4.png)
+
+* ±à¼­ÎÄ¼ş`/etc/resolv.conf`, Ìí¼Ó
+
+``` shell
+nameserver 223.5.5.5
+nameserver 8.8.8.8
+search localdomain
+```
+
+* ÖØÆôÍøÂ··şÎñ¼´¿É.
+
+---
+
 ## ²Î¿¼ÎÄÏ×
 
 ---
