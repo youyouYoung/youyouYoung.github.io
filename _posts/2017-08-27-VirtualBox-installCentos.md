@@ -1,127 +1,127 @@
 ---
 layout: post
-title:  Ê¹ÓÃVirtualBox°²×°Centos7ĞéÄâ»ú
+title:  ä½¿ç”¨VirtualBoxå®‰è£…Centos7è™šæ‹Ÿæœº
 date:   2017-08-27 13:58:56
 categories: Centos
-expert: Ñ§Ï°ambari²¿ÊğÓ¦ÓÃSparkÊ±, ĞèÒªÄ£ÄâÒ»¸öCentos¼¯Èº. Ã¿´Î´´½¨¶¼Íü¼Ç·½·¨, ÕâÀï¼ÇÂ¼Ò»ÏÂ.
+expert: å­¦ä¹ ambariéƒ¨ç½²åº”ç”¨Sparkæ—¶, éœ€è¦æ¨¡æ‹Ÿä¸€ä¸ªCentosé›†ç¾¤. æ¯æ¬¡åˆ›å»ºéƒ½å¿˜è®°æ–¹æ³•, è¿™é‡Œè®°å½•ä¸€ä¸‹.
 ---
 
 * content
 {:toc}
 
-## Ç°ÖÃÌõ¼ş
+## å‰ç½®æ¡ä»¶
 
 ---
 
-* VirtualBox Version 5.1.26. ÈçÍ¼:
+* VirtualBox Version 5.1.26. å¦‚å›¾:
 
-![VirtualBoxĞÅÏ¢Í¼]({{ site.baseurl }}/file/VirtualBox_Info.png)
+![VirtualBoxä¿¡æ¯å›¾]({{ site.baseurl }}/file/VirtualBox_Info.png)
 
-* Centos.iso ½¨ÒéÊ¹ÓÃDVD°æ±¾, ´óĞ¡ÊÊÖĞÒÑ°²×°Èí¼ş¹»ÓÃ. ¿ÉÒÔ´Ó[±±¾©Àí¹¤´óÑ§¿ªÔ´Èí¼ş¾µÏñ·şÎñ](http://mirror.bit.edu.cn/web/)ÏÂÔØ
+* Centos.iso å»ºè®®ä½¿ç”¨DVDç‰ˆæœ¬, å¤§å°é€‚ä¸­å·²å®‰è£…è½¯ä»¶å¤Ÿç”¨. å¯ä»¥ä»[åŒ—äº¬ç†å·¥å¤§å­¦å¼€æºè½¯ä»¶é•œåƒæœåŠ¡](http://mirror.bit.edu.cn/web/)ä¸‹è½½
 
-* Èç¹ûVirtualBox²»Ö§³Ö°²×°64Î»²Ù×÷ÏµÍ³, ĞèÒªÔÚ¼ÆËã»úÆô¶¯Ê±½øÈëBIOS½«**ĞéÄâ»¯¼¼ÊõÉèÖÃÎª¿ÉÓÃ**. ¿É²Î¿¼[Á´½Ó](http://www.askmaclean.com/archives/vbox-virtualbox-64-bit.html). ²»Í¬µÄBIOS¿ÉÄÜÎ»ÖÃ²»Í¬.
+* å¦‚æœVirtualBoxä¸æ”¯æŒå®‰è£…64ä½æ“ä½œç³»ç»Ÿ, éœ€è¦åœ¨è®¡ç®—æœºå¯åŠ¨æ—¶è¿›å…¥BIOSå°†**è™šæ‹ŸåŒ–æŠ€æœ¯è®¾ç½®ä¸ºå¯ç”¨**. å¯å‚è€ƒ[é“¾æ¥](http://www.askmaclean.com/archives/vbox-virtualbox-64-bit.html). ä¸åŒçš„BIOSå¯èƒ½ä½ç½®ä¸åŒ.
 
-
----
-
-## ´´½¨ĞéÄâ»ú
 
 ---
 
-1. ĞÂ½¨ĞéÄâ»ú, Ö¸¶¨ÎªCentosÏµÍ³. ÕâÀïType:Linux Version:Red Hat(64-bit)
+## åˆ›å»ºè™šæ‹Ÿæœº
+
+---
+
+1. æ–°å»ºè™šæ‹Ÿæœº, æŒ‡å®šä¸ºCentosç³»ç»Ÿ. è¿™é‡ŒType:Linux Version:Red Hat(64-bit)
 
 ![centos_step0]({{ site.baseurl }}/file/create_centos_step0.png)
 
-2. ÉèÖÃÄÚ´æ´óĞ¡. ÕâÀïÁ¿Á¦¶øĞĞ.
+2. è®¾ç½®å†…å­˜å¤§å°. è¿™é‡Œé‡åŠ›è€Œè¡Œ.
 
 ![centos_step1]({{ site.baseurl }}/file/create_centos_step1.png)
 
-3. ´´½¨´ÅÅÌ¿Õ¼ä, Ñ¡ÔñÏÖÔÚ´´½¨.
+3. åˆ›å»ºç£ç›˜ç©ºé—´, é€‰æ‹©ç°åœ¨åˆ›å»º.
 
 ![centos_step2]({{ site.baseurl }}/file/create_centos_step2.png)
 
-4. Ñ¡ÔñÎÄ¼şÀàĞÍ, Ä¬ÈÏ¼´¿É.
+4. é€‰æ‹©æ–‡ä»¶ç±»å‹, é»˜è®¤å³å¯.
 
 ![centos_step3]({{ site.baseurl }}/file/create_centos_step3.png)
 
-5. ĞéÄâ»ú´ÅÅÌÔÚÕæÊµ´ÅÅÌÉÏµÄÕ¼ÓÃ·½Ê½, ÎÒÑ¡Ôñ¹Ì¶¨´óĞ¡ÊÇÎªÁËÔËĞĞÁ÷³©ĞÔ¿¼ÂÇ.
+5. è™šæ‹Ÿæœºç£ç›˜åœ¨çœŸå®ç£ç›˜ä¸Šçš„å ç”¨æ–¹å¼, æˆ‘é€‰æ‹©å›ºå®šå¤§å°æ˜¯ä¸ºäº†è¿è¡Œæµç•…æ€§è€ƒè™‘.
 
 ![centos_step4]({{ site.baseurl }}/file/create_centos_step4.png)
 
-6. ·ÖÅä´ÅÅÌ´óĞ¡, Á¿Á¦¶øĞĞ¼´¿É.
+6. åˆ†é…ç£ç›˜å¤§å°, é‡åŠ›è€Œè¡Œå³å¯.
 
 ![centos_step5]({{ site.baseurl }}/file/create_centos_step5.png)
 
-Íê³ÉÒÔÉÏÁù²½¼´¿É´´½¨Ò»¸öĞÂµÄĞéÄâ»ú.
+å®Œæˆä»¥ä¸Šå…­æ­¥å³å¯åˆ›å»ºä¸€ä¸ªæ–°çš„è™šæ‹Ÿæœº.
 
 ---
 
-## Ê×´Î¿ª»úÇ°ÅäÖÃ
+## é¦–æ¬¡å¼€æœºå‰é…ç½®
 
 ---
 
-ÉÏÃæµÄ²Ù×÷ÎÒÃÇÒÑ¾­¸øĞéÄâ»ú·ÖÅäÁËÄÚ´æºÍÓ²ÅÌ, ½ÓÏÂÀ´¿ªÊ¼°²×°ÏµÍ³. µã»÷¸Õ´´½¨µÄĞéÄâ»úÓÒ¼ü½øÈëÉèÖÃ½çÃæ.
+ä¸Šé¢çš„æ“ä½œæˆ‘ä»¬å·²ç»ç»™è™šæ‹Ÿæœºåˆ†é…äº†å†…å­˜å’Œç¡¬ç›˜, æ¥ä¸‹æ¥å¼€å§‹å®‰è£…ç³»ç»Ÿ. ç‚¹å‡»åˆšåˆ›å»ºçš„è™šæ‹Ÿæœºå³é”®è¿›å…¥è®¾ç½®ç•Œé¢.
 
-1. **System**½çÃæ, Æô¶¯Ë³Ğò´¦È¡ÏûÈíÅÌÑ¡Ïî, ²¢½«¹âÇıºÍÓ²ÅÌÉÏÒÆ.
+1. **System**ç•Œé¢, å¯åŠ¨é¡ºåºå¤„å–æ¶ˆè½¯ç›˜é€‰é¡¹, å¹¶å°†å…‰é©±å’Œç¡¬ç›˜ä¸Šç§».
 
 ![setting_centos_step0]({{ site.baseurl }}/file/setting_centos_step0.png)
 
-2. **Storage**½çÃæ, ¹âÇıÌí¼ÓÎÒÃÇÏÂÔØºÃµÄ`centos.iso`¾µÏñÎÄ¼ş. 
+2. **Storage**ç•Œé¢, å…‰é©±æ·»åŠ æˆ‘ä»¬ä¸‹è½½å¥½çš„`centos.iso`é•œåƒæ–‡ä»¶. 
 
 ![setting_centos_step1]({{ site.baseurl }}/file/setting_centos_step1.png)
 
-3. **Network**½çÃæ, **Ö»Æô¶¯µÚÒ»¸öÍøÂçÊÊÅäÆ÷, Í¨¹ıAttached toÑ¡ÔñNATÄ£Ê½, ÆäÓàÄ¬ÈÏ¼´¿É**. Ç§Íò²»ÒªÊ¹ÓÃÆäËû·½Ê½. 
+3. **Network**ç•Œé¢, **åªå¯åŠ¨ç¬¬ä¸€ä¸ªç½‘ç»œé€‚é…å™¨, é€šè¿‡Attached toé€‰æ‹©NATæ¨¡å¼, å…¶ä½™é»˜è®¤å³å¯**. åƒä¸‡ä¸è¦ä½¿ç”¨å…¶ä»–æ–¹å¼. 
 
 ![setting_centos_step2]({{ site.baseurl }}/file/setting_centos_step2.png)
 
-µã»÷±£´æ°´Å¥, ÒÔÉÏÎÒÃÇÉèÖÃºÃÁË³õ´ÎÆô¶¯Ç°µÄ±ØÒªÅäÖÃ. ×¼±¸¿ª»ú°²×°ÏµÍ³.
+ç‚¹å‡»ä¿å­˜æŒ‰é’®, ä»¥ä¸Šæˆ‘ä»¬è®¾ç½®å¥½äº†åˆæ¬¡å¯åŠ¨å‰çš„å¿…è¦é…ç½®. å‡†å¤‡å¼€æœºå®‰è£…ç³»ç»Ÿ.
 
 ---
 
-## °²×°ÏµÍ³
+## å®‰è£…ç³»ç»Ÿ
 
 ---
 
-ÏÂÃæ¿ªÊ¼°²×° `Centos 7`
+ä¸‹é¢å¼€å§‹å®‰è£… `Centos 7`
 
-1. Ñ¡ÔñÖ±½Ó°²×°, ÇÃ»÷»Ø³µºóµÈ´ıÏµÍ³³ÌĞò×Ô¼ì.
+1. é€‰æ‹©ç›´æ¥å®‰è£…, æ•²å‡»å›è½¦åç­‰å¾…ç³»ç»Ÿç¨‹åºè‡ªæ£€.
 
 ![install_centos_step0]({{ site.baseurl }}/file/install_centos_step0.png)
 
-2. Ñ¡ÔñÓïÑÔ, ÕâÀïÊ¹ÓÃÓ¢Óï. Ö´ĞĞÏÂÒ»²½. 
+2. é€‰æ‹©è¯­è¨€, è¿™é‡Œä½¿ç”¨è‹±è¯­. æ‰§è¡Œä¸‹ä¸€æ­¥. 
 
 ![install_centos_step1]({{ site.baseurl }}/file/install_centos_step1.png)
 
-3. Ê×ÏÈÑ¡ÔñÊ±Çø(DATE & TIME), µØÍ¼ÉÏµã»÷ÖĞ¹ú¼´¿É.
+3. é¦–å…ˆé€‰æ‹©æ—¶åŒº(DATE & TIME), åœ°å›¾ä¸Šç‚¹å‡»ä¸­å›½å³å¯.
 
 ![install_centos_step2]({{ site.baseurl }}/file/install_centos_step2.png)
 
-4. ÅäÖÃÍøÂç(NETWORK & HOST NAME), **ÕâÀïÒ»¶¨Òª½« Ethernet Ñ¡ÔñÎª¿ª»úÆô¶¯.**(10.0.2.2 10.0.2.3)
+4. é…ç½®ç½‘ç»œ(NETWORK & HOST NAME), **è¿™é‡Œä¸€å®šè¦å°† Ethernet é€‰æ‹©ä¸ºå¼€æœºå¯åŠ¨.**(10.0.2.2 10.0.2.3)
 
 ![install_centos_step3]({{ site.baseurl }}/file/install_centos_step3.png)
 ![install_centos_step4]({{ site.baseurl }}/file/install_centos_step4.png)
 
-5. Ñ¡Ôñ°²×°Î»ÖÃ(INSTALLATION DESTINATION). ÕâÀï²»ÓÃ×öÆäËûÑ¡Ôñ, Ö»ÊÇÎªÁËÈ·ÈÏÒ»ÏÂ¶øÒÑ. 
+5. é€‰æ‹©å®‰è£…ä½ç½®(INSTALLATION DESTINATION). è¿™é‡Œä¸ç”¨åšå…¶ä»–é€‰æ‹©, åªæ˜¯ä¸ºäº†ç¡®è®¤ä¸€ä¸‹è€Œå·². 
 
 ![install_centos_step5]({{ site.baseurl }}/file/install_centos_step5.png)
 
-6. µã»÷¿ªÊ¼°²×°, ÔÚÕâ¸ö½çÃæÖĞÎªrootÓÃ»§´´½¨ÃÜÂë. µã»÷È·ÈÏ¼´¿É.
+6. ç‚¹å‡»å¼€å§‹å®‰è£…, åœ¨è¿™ä¸ªç•Œé¢ä¸­ä¸ºrootç”¨æˆ·åˆ›å»ºå¯†ç . ç‚¹å‡»ç¡®è®¤å³å¯.
 
 ![install_centos_step6]({{ site.baseurl }}/file/install_centos_step6.png)
 
-ÒÔÉÏÎªÕû¸ö°²×°¹ı³Ì, µÈ´ı°²×°½áÊøºó, ¿ÉÒÔÊ¹ÓÃ`root`ÕË»§ºÍ×îºóÒ»²½ÉèÖÃµÄÃÜÂëµÇÂ¼ÏµÍ³ÁË.
+ä»¥ä¸Šä¸ºæ•´ä¸ªå®‰è£…è¿‡ç¨‹, ç­‰å¾…å®‰è£…ç»“æŸå, å¯ä»¥ä½¿ç”¨`root`è´¦æˆ·å’Œæœ€åä¸€æ­¥è®¾ç½®çš„å¯†ç ç™»å½•ç³»ç»Ÿäº†.
 
 ---
 
-## ÅäÖÃÍøÂç
+## é…ç½®ç½‘ç»œ
 
 ---
 
-Í¨¹ıÉÏÃæµÄ°²×°¹ı³Ì, ¿ÉÒÔÍê³ÉcentosµÄ°²×°, µ«ÊÇÈÔÈ»´æÔÚÎÊÌâ. Ö÷»úÎŞ·¨·ÃÎÊĞéÄâ»úÒòÎªÔÚÅäÖÃĞéÄâ»úÊ±ÎÒÃÇÊ¹ÓÃÁËNATÍøÂçÄ£Ê½. 
+é€šè¿‡ä¸Šé¢çš„å®‰è£…è¿‡ç¨‹, å¯ä»¥å®Œæˆcentosçš„å®‰è£…, ä½†æ˜¯ä»ç„¶å­˜åœ¨é—®é¢˜. ä¸»æœºæ— æ³•è®¿é—®è™šæ‹Ÿæœºå› ä¸ºåœ¨é…ç½®è™šæ‹Ÿæœºæ—¶æˆ‘ä»¬ä½¿ç”¨äº†NATç½‘ç»œæ¨¡å¼. 
 
-ÕâÀïĞèÒª½«NATÄ£Ê½×ªÎªÇÅ½ÓÄ£Ê½, ²¢Î»Centos 7ÅäÖÃ¾²Ì¬IP.
+è¿™é‡Œéœ€è¦å°†NATæ¨¡å¼è½¬ä¸ºæ¡¥æ¥æ¨¡å¼, å¹¶ä½Centos 7é…ç½®é™æ€IP.
 
-1. °²×°`net-tools`
+1. å®‰è£…`net-tools`
 
 ```shell
 yum -y install net-tools
@@ -129,19 +129,19 @@ yum -y install net-tools
 
 ![network_centos_step0]({{ site.baseurl }}/file/network_centos_step0.png)
 
-2. `ifconfig`²é¿´Íø¿¨ĞÅÏ¢
+2. `ifconfig`æŸ¥çœ‹ç½‘å¡ä¿¡æ¯
 
 ![network_centos_step1]({{ site.baseurl }}/file/network_centos_step1.png)
 
-ÉÏÍ¼ÖĞ¿´³öÏµÍ³¾ßÓĞÒ»¸ö`enp0s3`µÄÍø¿¨.
+ä¸Šå›¾ä¸­çœ‹å‡ºç³»ç»Ÿå…·æœ‰ä¸€ä¸ª`enp0s3`çš„ç½‘å¡.
 
-3. ±à¼­Íø¿¨ĞÅÏ¢
+3. ç¼–è¾‘ç½‘å¡ä¿¡æ¯
 
 ``` shell
 vi /etc/sysconfig/network-scripts/ifcfg-enp0s3
 ```
 
-½«`BOOTPROTO`¸ÄÎª`static`. ²¢Ìí¼ÓIPĞÅÏ¢, È«²¿ÎÄ¼şÄÚÈİÎª:
+å°†`BOOTPROTO`æ”¹ä¸º`static`. å¹¶æ·»åŠ IPä¿¡æ¯, å…¨éƒ¨æ–‡ä»¶å†…å®¹ä¸º:
 
 ```
 TYPE="Ethernet"
@@ -168,19 +168,19 @@ NM_CONTROLLED=no
 NETMASK=255.255.255.0
 ```
 
-4. ¹Ø±ÕĞéÄâ»ú, ½«ÍøÂçÉèÖÃÎªÇÅ½ÓÄ£Ê½.
+4. å…³é—­è™šæ‹Ÿæœº, å°†ç½‘ç»œè®¾ç½®ä¸ºæ¡¥æ¥æ¨¡å¼.
 
 ![network_centos_step3]({{ site.baseurl }}/file/network_centos_step3.png)
 
-5. Æô¶¯ĞéÄâ»ú, Ê¹ÓÃ`ping`¼´¿É¼ì²éµ½Ö÷»úºÍĞéÄâ»úÖ®¼äµÄ·ÃÎÊÁË. µ«Ä¿Ç°¿ÉÄÜ»¹Ã»°ì·¨½âÎöÓòÃû. 
+5. å¯åŠ¨è™šæ‹Ÿæœº, ä½¿ç”¨`ping`å³å¯æ£€æŸ¥åˆ°ä¸»æœºå’Œè™šæ‹Ÿæœºä¹‹é—´çš„è®¿é—®äº†. ä½†ç›®å‰å¯èƒ½è¿˜æ²¡åŠæ³•è§£æåŸŸå. 
 
-ËùÒÔÎÒÃÇÍ¨¹ı`ping www.baidu.com`, ÈÔÈ»ÎŞ·¨·ÃÎÊ°Ù¶È. ËùÒÔ×îºóÒ»²¿ÎÒÃÇĞèÒªÅäÖÃDNS·şÎñÆ÷µØÖ·.
+æ‰€ä»¥æˆ‘ä»¬é€šè¿‡`ping www.baidu.com`, ä»ç„¶æ— æ³•è®¿é—®ç™¾åº¦. æ‰€ä»¥æœ€åä¸€éƒ¨æˆ‘ä»¬éœ€è¦é…ç½®DNSæœåŠ¡å™¨åœ°å€.
 
-* ĞŞ¸ÄÎÄ¼ş`/etc/NetworkManager/NetworkManager.conf`, ÔÚ`main`²¿·ÖÌí¼Ó`dns=none`
+* ä¿®æ”¹æ–‡ä»¶`/etc/NetworkManager/NetworkManager.conf`, åœ¨`main`éƒ¨åˆ†æ·»åŠ `dns=none`
 
 ![network_centos_step4]({{ site.baseurl }}/file/network_centos_step4.png)
 
-* ±à¼­ÎÄ¼ş`/etc/resolv.conf`, Ìí¼Ó
+* ç¼–è¾‘æ–‡ä»¶`/etc/resolv.conf`, æ·»åŠ 
 
 ``` shell
 nameserver 223.5.5.5
@@ -188,15 +188,15 @@ nameserver 8.8.8.8
 search localdomain
 ```
 
-* ÖØÆôÍøÂ··şÎñ¼´¿É.
+* é‡å¯ç½‘è·¯æœåŠ¡å³å¯.
 
 ---
 
-## ²Î¿¼ÎÄÏ×
+## å‚è€ƒæ–‡çŒ®
 
 ---
 
-* **[VirtualBoxÃ»ÓĞ64Î»Ñ¡Ïî£¬ÎŞ·¨°²×°64Î»µÄ½â¾ö·½·¨](http://www.askmaclean.com/archives/vbox-virtualbox-64-bit.html)**
-* **[VirtualBox°²×°CentOS 7ĞéÄâ»ú(¼¯Èº)](http://blog.csdn.net/napoay/article/details/69675732)**
-* **[CentOS 7 ÏÂ£¬ÈçºÎÉèÖÃDNS·şÎñÆ÷](http://blog.csdn.net/cheng_fangang/article/details/42676783)**
+* **[VirtualBoxæ²¡æœ‰64ä½é€‰é¡¹ï¼Œæ— æ³•å®‰è£…64ä½çš„è§£å†³æ–¹æ³•](http://www.askmaclean.com/archives/vbox-virtualbox-64-bit.html)**
+* **[VirtualBoxå®‰è£…CentOS 7è™šæ‹Ÿæœº(é›†ç¾¤)](http://blog.csdn.net/napoay/article/details/69675732)**
+* **[CentOS 7 ä¸‹ï¼Œå¦‚ä½•è®¾ç½®DNSæœåŠ¡å™¨](http://blog.csdn.net/cheng_fangang/article/details/42676783)**
 
