@@ -73,7 +73,11 @@ select sum(expend) as 阅读总时长, count(id) as 阅读次数, time as 最后
 为了验证这个说法, 我使用了以下的sql:
 
 ```
+-- 以id逆序输出
 select * from (select * from reading_record order by id desc) as temptable;
+
+-- 以id正序输出
+select * from (select * from reading_record order by id) as temptable;
 ```
 
 经过验证发现结果仍然是id正序输出的记录, 所以我这个版本的MySQL会忽略subquery的排序.
@@ -81,3 +85,24 @@ select * from (select * from reading_record order by id desc) as temptable;
 ### 解决subquery忽略排序
 
 **为了实现subquery可以排序, 添加limit限制.**
+
+通过给subquery的最后加上limit限制来实现subquery的排序.
+
+```
+-- 为了让子查询可以查到所有的结果, 所以把limit的值设置到非常大
+select * from (select * from reading_record order by id desc limit 0, 154785445745657996) as temptable;
+```
+
+以上解决了所有的问题, 所欲最终通过下面的sql实现了我最开始的需求.
+
+```
+select sum(expend) as 阅读总时长, count(id) as 阅读次数, time as 最后阅读时间, note as 最后的阅读评论 from (select * from reading_record order by id desc limit 0, 154785445745657996) as temptable group by user, file
+```
+---
+
+## 参考文献
+
+---
+
+* **( SQL优化：组内排序取最大值 )[http://blog.itpub.net/29730827/viewspace-2136118/]**
+* **(mysql group by 组内排序)[http://blog.csdn.net/shellching/article/details/8292338]**
