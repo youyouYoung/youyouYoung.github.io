@@ -75,4 +75,4 @@ expert: 学习awk的输出时, 记录关于printf中控制字符的含义
 
 ---
 
-* **(5.5.2 Format-Control Letters)[http://www.gnu.org/software/gawk/manual/html_node/Control-Letters.html#Control-Letters]**
+* **[5.5.2 Format-Control Letters](http://www.gnu.org/software/gawk/manual/html_node/Control-Letters.html#Control-Letters)**
