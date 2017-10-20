@@ -37,12 +37,12 @@ expert: 在GNU上学习awk的使用第二章记录
 用于这是field的分隔符.
 
 **-f source-file**  
-**--file source-file**
+**\-\-file source-file**
 
 从指定文件中获取`awk`的处理程序. 这个选项可以如果被使用多次, 表示将每个原文件的处理程序组合为一个大的组合程序.
 
 **-v var=val**  
-**assign var=val**
+**\-\-assign var=val**
 
 用于定义一个变量`var`并赋值为`val`. `-v`后面只能为一个变量赋值, 如果想给其他变量赋值可以在使用一个`-v`选项. 同时如果对一个变量多次赋值, 会以最后一次的值为变量的实际值.
 
@@ -62,34 +62,34 @@ expert: 在GNU上学习awk的使用第二章记录
 将全局变量的`类型`, `最终值`打印到文件中. 如果文件`file`没有被指定, 默认输出到当前路径下的`awkvars.out`文件中. 注意*file变量和-d参数之间不能有空格*.
 
 **-D[file]**  
-**--debug[=file]**
+**\-\-debug[=file]**
 
 打开调试模式. 如果不指定`file`文件, 调试器将会以交互形式从标准输入读取命令. 或者可以通过指定file文件让调试器从文件中获取执行命令.
 
 **-i source-file**  
-**--include source-file**
+**\-\-include source-file**
 
 类似于`-f`, 用于指定`awk`的执行程序所在文件.
 
 **-l ext**  
-**--load ext**
+**\-\-load ext**
 
 获取一个动态扩展文件`ext`. 扩展文件是使用编译语言`C`或者`C++`实现程序文件. 这个文件一般用于对`awk`功能的扩展.
 
 **-L**  
-**--lint**
+**\-\-lint**
 
 对于程序中可能会出现错误的代码或者不可以移植到其他awk版本使用的代码发出警告.
 
 **-p[file]**  
-**-profile[=file]**
+**\-\-profile[=file]**
 
 启动对`awk`程序的分析. 该选项会产生一个文件, 文件中标有每段`代码`, `代码块`, `表达式`被执行的次数. 详细介绍请看[这里](http://www.gnu.org/software/gawk/manual/html_node/Profiling.html#Profiling).
 
 如果没有指定`file`文件的话, 将会在当前路径下生一个名为`awkprof.out`的文件. 如果指定`file`那么`file`与`-p`之间不能有空格.
 
 **-S**  
-**--sandbox**
+**\-\-sandbox**
 
 用于禁止awk程序使用`system()`方法, 禁止输入/输出重定向. 这个选项一般用在运行安全性未知的awk程序上面.
 
