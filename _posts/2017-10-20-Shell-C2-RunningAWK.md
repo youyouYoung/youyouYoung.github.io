@@ -129,4 +129,60 @@ some_program | awk -f awk_program.awk file1 - file2
 
 上面示例中我们使用`awk_program.awk`程序对file1, 标准输入, file2进行处理.
 
+---
 
+## 环境变量
+
+环境变量的多个值之间使用`:`分隔. 可以使用空字符串或者`.`表示当前目录. 例如:
+
+```
+# 以下的三种方式都是为环境变量PATH赋值为: 当前文件夹/folder1/folder2
+PATH=.:folder1:folder2
+PATH=:folder1:folder2
+PATH=folder::folder2
+```
+
+**AWKPATH**
+
+用于指定`awk`程序文件搜索路径. 我们使用`-f program-file`选项指定一个处理程序, 一般情况下`awk`程序会在当前目录下查找文件名称为`program-file`的文件, 如果没有找到则在`AWKPATH`中指定的路径下查找文件.
+
+**AWKLIBPATH**
+
+用于指定`awk`扩展程序文件的搜索路径. 扩展程序是由`C`, `C++`编译成的程序文件.
+
+使用这些环境变量, 可以定义多个目录用于管理不同功能的`awk`程序. 然后将一个个的小程序组合为整个程序去处理特定的文件.
+
+---
+
+## 处理程序间的调用
+
+将`awk`程序做成一个个简短且功能唯一的小程序, 通过相互引用来实现更重要的功能, 这样就可以提高代码的复用.
+
+可以使用`@include`方式在一个程序中引用其他的程序. 注意**该功能时gawk的特性.**
+
+file1用于获取文件中数字的个数:
+```
+BEGIN { FS="" }
+
+{
+	for (i=1; i<NF; i++) {
+		if ($i >= '0' && $i <= '9') sum++;
+	}
+}
+```
+
+file2用于输出数字的总数:
+```
+@include "file1"
+
+END { print sum }
+```
+使用`awk -f file2 data`执行可获得data文件中数字的个数.
+
+`@include`可以实现内嵌, 比如file3引用了file2, 执行file3会同时执行file2和file1.
+
+---
+
+## 参看文献
+
+* **[The GNU Awk User’s Guide](http://www.gnu.org/software/gawk/manual/html_node/Invoking-Gawk.html#Invoking-Gawk)**
